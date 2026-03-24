@@ -8,7 +8,6 @@ class Tablero:
     Contiene el casillero (matriz de Casillas) con las naves colocadas.
     """
 
-    # Constantes de resultado (mismas que Casilla)
     YA_DISPARADA = -1
     AGUA = 0
     TOCADO = 1
@@ -31,13 +30,11 @@ class Tablero:
         sub3 = Nave("U-505",             "submarino",    1)
         sub4 = Nave("U-534",             "submarino",    1)
 
-        # Inicializar el casillero con casillas vacías
         self.casillero = [
             [Casilla() for _ in range(tamanho)]
             for _ in range(tamanho)
         ]
 
-        # Colocar las naves en sus posiciones (fila, columna)
         self.casillero[1][1] = Casilla(nave=por1)
         self.casillero[1][2] = Casilla(nave=por1)
         self.casillero[1][3] = Casilla(nave=por1)
@@ -71,7 +68,6 @@ class Tablero:
         """
         resultado = self.casillero[x][y].recibir_disparo()
 
-        # Si se hundió una nave, actualizar el estado de todas sus casillas
         if resultado == self.HUNDIDO:
             nave_hundida = self.casillero[x][y].nave
             self._actualizar_casillas_hundidas(nave_hundida)
