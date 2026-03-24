@@ -7,7 +7,6 @@ class Juego:
     Coordina los ataques y muestra los resultados por pantalla.
     """
 
-    # Constantes de resultado
     YA_DISPARADA = -1
     AGUA = 0
     TOCADO = 1
@@ -19,17 +18,14 @@ class Juego:
         """
         self.tablero = Tablero()
 
-        # Ataques de prueba: hundir el Destructor (casillas 1,1 a 1,5)
         self.lanzar_ataque(1, 1)
         self.lanzar_ataque(1, 2)
         self.lanzar_ataque(1, 3)
         self.lanzar_ataque(1, 4)
         self.lanzar_ataque(1, 5)
 
-        # Disparo repetido para probar YA_DISPARADA
         self.lanzar_ataque(1, 1)
 
-        # Disparo al agua
         self.lanzar_ataque(0, 0)
 
     def lanzar_ataque(self, x, y):
