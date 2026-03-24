@@ -4,7 +4,6 @@ class Nave:
     Gestiona la vida y el estado de hundimiento.
     """
 
-    # Constantes de resultado
     TOCADO = 1
     HUNDIDO = 2
 
@@ -18,7 +17,7 @@ class Nave:
         self.nombre = nombre
         self.tipo = tipo
         self.vida = vida
-        self.hundido = False   # True cuando vida llega a 0
+        self.hundido = False
 
     def recibir_disparo(self):
         """
